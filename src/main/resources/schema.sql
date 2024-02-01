@@ -1,7 +1,9 @@
 CREATE TABLE Servants (
   servant_id INT NOT NULL,
   name VARCHAR NOT NULL,
-  class_id INT NOT NULL
+  rare INT NOT NULL,
+  class_id INT NOT NULL,
+  stage INT NOT NULL
 );
 
 CREATE TABLE Class (
