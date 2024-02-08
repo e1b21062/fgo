@@ -39,14 +39,15 @@ public class IndexController {
         skills.getSkill1(), skills.getSkill2(), skills.getSkill3(),
         skills.getAskill1(), skills.getAskill2(), skills.getAskill3(), 1);
 
-    System.out.println("確認2");
-    for (Materials material : ma) {
-      System.out.println("Name: " + material.getName() + ", Amount: " + material.getAmount());
-    }
-
     model.addAttribute("ma", ma);
-    model.addAttribute("skills", skills);
     model.addAttribute("ser", ser);
     return "mainroom.html";
+  }
+
+  @GetMapping("/addroom")
+  public String addroom(ModelMap model) {
+    ArrayList<Materials> materials = MMapper.selectMaterials();
+    model.addAttribute("materials", materials);
+    return "addroom.html";
   }
 }
