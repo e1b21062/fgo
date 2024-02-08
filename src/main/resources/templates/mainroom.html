@@ -9,6 +9,10 @@
 <body>
   <h1>待合室</h1>
 
+  [[${ser.name}]]の育成
+  <ul>
+    <li th:each="m : ${ma}"> [[${m.name}]]:[[${m.amount}]]</a></li>
+  </ul>
   <h2><a href="/mainroom"></a></h2>
 
   <br>

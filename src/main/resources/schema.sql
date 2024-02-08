@@ -39,3 +39,10 @@ CREATE TABLE SkillEnhancementRequirements (
   material_id INT NOT NULL,
   quantity INT NOT NULL
 );
+
+CREATE TABLE ASkillEnhancementRequirements (
+  servant_id INT NOT NULL,
+  enhancement_stage INT NOT NULL,
+  material_id INT NOT NULL,
+  quantity INT NOT NULL
+);
